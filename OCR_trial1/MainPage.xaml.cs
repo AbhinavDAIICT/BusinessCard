@@ -90,8 +90,9 @@ namespace OCR_trial1
                     }
 
                     // Display recognized text.
-                    OcrText.Text = recognizedText;
+                 //   OcrText.Text = recognizedText;
                     await WriteToFile(recognizedText);
+                    await ReadFile();
 
                  //   OcrText.Text = "Here 4";
                 }
@@ -103,6 +104,7 @@ namespace OCR_trial1
 
         private async Task WriteToFile(string octext)
         {
+            OcrText.Text = "Writing to the file now";
             // Get the text data from the textbox. 
             byte[] fileBytes = System.Text.Encoding.UTF8.GetBytes(octext);
 
@@ -122,6 +124,27 @@ namespace OCR_trial1
             }
         }
 
+        private async Task ReadFile()
+        {
+            // Get the local folder.
+            StorageFolder local = Windows.Storage.ApplicationData.Current.LocalFolder;
+
+            if (local != null)
+            {
+                // Get the DataFolder folder.
+                var dataFolder = await local.GetFolderAsync("DataFolder");
+
+                // Get the file.
+                var file = await dataFolder.OpenStreamForReadAsync("DataFile.txt");
+
+                // Read the data.
+                using (StreamReader streamReader = new StreamReader(file))
+                {
+                    this.OcrText.Text = streamReader.ReadToEnd();
+                }
+
+            }
+        }
 
         //Code for initialization, capture completed, image availability events; also setting the source for the viewfinder.
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
