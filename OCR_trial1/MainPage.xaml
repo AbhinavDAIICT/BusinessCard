@@ -55,6 +55,7 @@
             </Canvas>
             <TextBlock x:Name="OcrText" HorizontalAlignment="Left" Margin="10,322,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="60" Width="676"/>
             <TextBlock x:Name="txtDebug" HorizontalAlignment="Left" Margin="10,403,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="343" Height="40"/>
+            <Button x:Name="probutt" Content="Button" HorizontalAlignment="Left" Margin="701,294,0,0" VerticalAlignment="Top" Width="75" Click="probutt_Click"/>
         </Grid>
 
 

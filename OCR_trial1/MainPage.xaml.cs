@@ -41,6 +41,8 @@ namespace OCR_trial1
         UInt32 height;
         BitmapImage bi;
         WriteableBitmap bitmap;
+        string[] email;
+        int mailindex = 0;
         // Constructor
         public MainPage()
         {
@@ -82,8 +84,13 @@ namespace OCR_trial1
                     {
                         foreach (var word in line.Words)
                         {
-                            OcrText.Text = "Here 3";
-
+                            try {
+                                isEmail(word.Text);
+                            }
+                            catch
+                            {
+                               OcrText.Text = e.ToString();
+                            }
                             recognizedText += word.Text + " ";
                         }
                         recognizedText += System.Environment.NewLine;
@@ -92,7 +99,8 @@ namespace OCR_trial1
                     // Display recognized text.
                  //   OcrText.Text = recognizedText;
                     await WriteToFile(recognizedText);
-                    await ReadFile();
+               //     await ReadFile();
+               
 
                  //   OcrText.Text = "Here 4";
                 }
@@ -101,13 +109,13 @@ namespace OCR_trial1
                     txtDebug.Text = "No Text found";
                 }
             }
-
+     
         private async Task WriteToFile(string octext)
         {
             OcrText.Text = "Writing to the file now";
             // Get the text data from the textbox. 
             byte[] fileBytes = System.Text.Encoding.UTF8.GetBytes(octext);
-
+           
             // Get the local folder.
             StorageFolder local = Windows.Storage.ApplicationData.Current.LocalFolder;
 
@@ -141,8 +149,21 @@ namespace OCR_trial1
                 using (StreamReader streamReader = new StreamReader(file))
                 {
                     this.OcrText.Text = streamReader.ReadToEnd();
+                    streamReader.Close();
                 }
 
+               
+            }
+        }
+
+        private void isEmail(string mailid)
+        {
+            string w = mailid;
+            if (w.Contains('@'))
+            {
+                email[mailindex] = w;
+                mailindex++;
+                OcrText.Text = w;
             }
         }
 
@@ -196,7 +217,7 @@ namespace OCR_trial1
                 cam.Initialized -= cam_Initialized;
                 cam.CaptureCompleted -= cam_CaptureCompleted;
                 cam.CaptureImageAvailable -= cam_CaptureImageAvailable;
-          //     cam.CaptureThumbnailAvailable -= cam_CaptureThumbnailAvailable;
+                //     cam.CaptureThumbnailAvailable -= cam_CaptureThumbnailAvailable;
             }
         }
         void cam_Initialized(object sender, Microsoft.Devices.CameraOperationCompletedEventArgs e)
@@ -271,6 +292,12 @@ namespace OCR_trial1
                     });
                 }
             }
+        }
+
+        private void probutt_Click(object sender, RoutedEventArgs e)
+        {
+            savedCounter = 1;
+          //  NavigationService.Navigate(new Uri("/ProcessPage.xaml", UriKind.Relative));
         }
 
         // Sample code for building a localized ApplicationBar
