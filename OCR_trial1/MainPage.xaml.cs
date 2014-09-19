@@ -21,6 +21,7 @@ using Windows.Storage;
 using Windows.Storage.Pickers;
 using System.Threading.Tasks;
 using Windows.Storage.FileProperties;
+using System.Text.RegularExpressions;
 
 
 
@@ -154,6 +155,12 @@ namespace OCR_trial1
 
                
             }
+        }
+
+        private void isPhone(string phone){
+            string p = phone;
+            string pattern1 = @"/^[\.-)( ]*([0-9]{3})[\.-)( ]*([0-9]{3})[\.-)( ]*([0-9]{4})$/";
+            bool includesPhone = Regex.IsMatch(p,pattern1);
         }
 
         private void isEmail(string mailid)
