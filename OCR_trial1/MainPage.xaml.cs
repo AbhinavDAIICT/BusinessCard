@@ -22,6 +22,7 @@ using Windows.Storage.Pickers;
 using System.Threading.Tasks;
 using Windows.Storage.FileProperties;
 using System.Text.RegularExpressions;
+using Microsoft.Phone.Tasks;
 
 
 
@@ -32,6 +33,9 @@ namespace OCR_trial1
         
 
         /// <Camera Variables>
+        /// SaveContactTask saveContactTask;
+        /// 
+        SaveContactTask saveContactTask;
         private int savedCounter = 0;
         PhotoCamera cam;
         MediaLibrary library = new MediaLibrary();
