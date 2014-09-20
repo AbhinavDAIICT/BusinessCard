@@ -35,6 +35,8 @@ namespace OCR_trial1
         /// <Camera Variables>
         /// SaveContactTask saveContactTask;
         /// 
+
+        SaveEmailAddressTask saveEmailAddressTask;
         SaveContactTask saveContactTask;
         private int savedCounter = 0;
         PhotoCamera cam;
@@ -53,6 +55,14 @@ namespace OCR_trial1
         {
             InitializeComponent();
             ocrEngine = new OcrEngine(OcrLanguage.English);
+            saveContactTask = new SaveContactTask();
+            saveContactTask.Completed += new EventHandler<SaveContactResult>(saveContactTask_Completed);
+            saveContactTask.FirstName = "John";
+            saveContactTask.LastName = "Doe";
+            saveContactTask.MobilePhone = "2065550123";
+
+            saveContactTask.Show();
+
         }
     
         private async void Button_Click(object sender, RoutedEventArgs e)
@@ -285,6 +295,27 @@ namespace OCR_trial1
                 e.ImageStream.Close();
             }
 
+        }
+
+        void saveContactTask_Completed(object sender, SaveContactResult e)
+        {
+            switch (e.TaskResult)
+            {
+                //Logic for when the contact was saved successfully
+                case TaskResult.OK:
+                    MessageBox.Show("Contact saved.");
+                    break;
+
+                //Logic for when the task was cancelled by the user
+                case TaskResult.Cancel:
+                    MessageBox.Show("Save cancelled.");
+                    break;
+
+                //Logic for when the contact could not be saved
+                case TaskResult.None:
+                    MessageBox.Show("Contact could not be saved.");
+                    break;
+            }
         }
 
         private void viewfinder_Tapped(object sender, System.Windows.Input.GestureEventArgs e)

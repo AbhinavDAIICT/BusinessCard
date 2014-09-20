@@ -78,3 +78,4 @@ C:\Users\abhinav\Documents\Visual Studio 2013\Projects\Business_Card\OCR_trial1\
 C:\Users\abhinav\Documents\Visual Studio 2013\Projects\Business_Card\OCR_trial1\obj\ARM\Debug\ProjectArchitectures.txt
 C:\Users\abhinav\Documents\Visual Studio 2013\Projects\Business_Card\OCR_trial1\obj\ARM\Debug\MDILProjectFiles.xml
 C:\Users\abhinav\Documents\Visual Studio 2013\Projects\Business_Card\OCR_trial1\obj\ARM\Debug\XapCacheFile.xml
+C:\Users\abhinav\Documents\Visual Studio 2013\Projects\Business_Card\OCR_trial1\obj\ARM\Debug\OCR_trial1.csprojResolveAssemblyReference.cache

@@ -1,6 +1,6 @@
-﻿<xapCache source="C:\Users\abhinav\Documents\Visual Studio 2013\Projects\Business_Card\OCR_trial1\Bin\ARM\Debug\OCR_trial1_Debug_ARM.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="9/18/2014 10:39:35 PM">
-  <file source="C:\Users\abhinav\Documents\Visual Studio 2013\Projects\Business_Card\OCR_trial1\Bin\ARM\Debug\resources.pri" archivePath="resources.pri" lastWriteTime="9/18/2014 10:39:30 PM" />
-  <file source="C:\Users\abhinav\Documents\Visual Studio 2013\Projects\Business_Card\OCR_trial1\obj\ARM\Debug\OCR_trial1.dll" archivePath="OCR_trial1.dll" lastWriteTime="9/18/2014 10:39:29 PM" />
+﻿<xapCache source="C:\Users\abhinav\Documents\Visual Studio 2013\Projects\Business_Card\OCR_trial1\Bin\ARM\Debug\OCR_trial1_Debug_ARM.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="9/20/2014 11:32:20 PM">
+  <file source="C:\Users\abhinav\Documents\Visual Studio 2013\Projects\Business_Card\OCR_trial1\Bin\ARM\Debug\resources.pri" archivePath="resources.pri" lastWriteTime="9/20/2014 11:32:14 PM" />
+  <file source="C:\Users\abhinav\Documents\Visual Studio 2013\Projects\Business_Card\OCR_trial1\obj\ARM\Debug\OCR_trial1.dll" archivePath="OCR_trial1.dll" lastWriteTime="9/20/2014 11:32:13 PM" />
   <file source="C:\Users\abhinav\Documents\Visual Studio 2013\Projects\Business_Card\OCR_trial1\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="9/10/2014 11:28:35 PM" />
   <file source="C:\Users\abhinav\Documents\Visual Studio 2013\Projects\Business_Card\OCR_trial1\Assets\BadgeLogo.png" archivePath="Assets\BadgeLogo.png" lastWriteTime="9/10/2014 11:28:35 PM" />
   <file source="C:\Users\abhinav\Documents\Visual Studio 2013\Projects\Business_Card\OCR_trial1\Assets\Logo.png" archivePath="Assets\Logo.png" lastWriteTime="9/10/2014 11:28:35 PM" />
@@ -22,6 +22,6 @@
   <file source="C:\Users\abhinav\Documents\Visual Studio 2013\Projects\Business_Card\packages\Microsoft.Windows.Ocr.1.0.0\lib\wp8\ARM\WindowsPreview.Media.Ocr.dll" archivePath="WindowsPreview.Media.Ocr.dll" lastWriteTime="9/10/2014 11:47:43 PM" />
   <file source="C:\Users\abhinav\Documents\Visual Studio 2013\Projects\Business_Card\packages\Microsoft.Windows.Ocr.1.0.0\lib\wp8\ARM\WindowsPreview.Media.Ocr.xml" archivePath="WindowsPreview.Media.Ocr.xml" lastWriteTime="9/10/2014 11:47:43 PM" />
   <file source="C:\Users\abhinav\Documents\Visual Studio 2013\Projects\Business_Card\OCR_trial1\Bin\ARM\Debug\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="9/18/2014 10:39:34 PM" />
-  <file source="C:\Users\abhinav\Documents\Visual Studio 2013\Projects\Business_Card\OCR_trial1\obj\ARM\Debug\MDILProjectFiles.xml" archivePath="MDILProjectFiles.xml" lastWriteTime="9/18/2014 10:39:34 PM" />
-  <file source="C:\Users\abhinav\Documents\Visual Studio 2013\Projects\Business_Card\OCR_trial1\Bin\ARM\Debug\AppxManifest.xml" archivePath="AppxManifest.xml" lastWriteTime="9/18/2014 10:39:32 PM" />
+  <file source="C:\Users\abhinav\Documents\Visual Studio 2013\Projects\Business_Card\OCR_trial1\obj\ARM\Debug\MDILProjectFiles.xml" archivePath="MDILProjectFiles.xml" lastWriteTime="9/20/2014 11:32:19 PM" />
+  <file source="C:\Users\abhinav\Documents\Visual Studio 2013\Projects\Business_Card\OCR_trial1\Bin\ARM\Debug\AppxManifest.xml" archivePath="AppxManifest.xml" lastWriteTime="9/20/2014 11:32:16 PM" />
 </xapCache>
